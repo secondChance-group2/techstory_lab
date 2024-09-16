@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="generel.css" />
+    <link rel="stylesheet" href="/css/generel.css" />
     <link rel="stylesheet" href="layout.css" />
     <title>Tech and Story lab</title>
   </head>
@@ -35,6 +35,39 @@
           <p>E: techandstorylab@kea.dk</p>
         </div>
       </section>
+
+      <form action="Contact">
+        <h1>If you have any questions</h1>
+        <p>Please fill in the form below</p>
+        <fieldset id="data-area">
+          <div class="row"><label for="name">Name</label></div>
+          <div class="row">
+            <input type="name" placeholder="Kim Kimsen" name="name" required />
+          </div>
+          <div class="row"><label for="email">Email</label></div>
+          <div class="row">
+            <input
+              type="email"
+              placeholder="email@email.com"
+              name="email"
+              required
+            />
+          </div>
+          <div class="row">
+            <label for="question">Ask your question here</label>
+          </div>
+
+          <textarea
+            class="question"
+            type="question"
+            placeholder="Your question"
+            name="question"
+          >
+          </textarea>
+          <button type="submit" class="submit">Send</button>
+        </fieldset>
+      </form>
+
       <section>
         <h3>Adgang til labbet</h3>
         <p>
