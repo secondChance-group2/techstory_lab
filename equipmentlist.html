@@ -7,18 +7,48 @@
   </head>
   <body>
     <main class="container">
+      <h1>PHOTO & VIDEO</h1>
       <template id="equipmentTemplate">
         <article class="content">
           <div class="equipment">
             <a class="imgLink" href=""></a>
-            <div class="item">
-              <h3>Canon EF 50 mm f/1.8 STM</h3>
-              <p class="equipment-info">Canon | Camera lens</p>
-              <p class="available">Available</p>
-            </div>
+        
           </div>
         </article>
       </template>
+
+      <form name="Contact" netlify></form>
+        <h1>If you have any questions</h1>
+        <p>Please fill in the form below</p>
+        <fieldset id="data-area">
+          <div class="row"><label for="name">Name</label></div>
+          <div class="row">
+            <input type="name" placeholder="Kim Kimsen" name="name" required />
+          </div>
+          <div class="row"><label for="email">Email</label></div>
+          <div class="row">
+            <input
+              type="email"
+              placeholder="email@email.com"
+              name="email"
+              required
+            />
+          </div>
+          <div class="row">
+            <label for="question">Ask your question here</label>
+          </div>
+
+          <textarea
+            class="question"
+            type="question"
+            placeholder="Your question"
+            name="question"
+          >
+          </textarea>
+          <button type="submit" class="submit">Send</button>
+        </fieldset>
+      </form>
+
     </main>
     <script src="/javascript/equipmentlist.js"></script>
   </body>
