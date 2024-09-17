@@ -15,21 +15,22 @@ const options = {
 
 fetch(url, options)
   .then((res) => res.json())
-  .then(show);
+  .then(showCategories);
 
-function show(data) {
-  console.log(data);
+function showCategories(cats) {
+  console.log(cats);
+  cats.forEach(showCategory);
 }
 
 //Viser data
 
-// function showCategory(cat) {
-//   const template = document.querySelector("template").content;
+function showCategory(cat) {
+  const template = document.querySelector("template").content;
 
-//   const clone = template.cloneNode(true);
+  const clone = template.cloneNode(true);
 
-//   clone.querySelector("a").textContent = cat.category;
-//   clone.querySelector("a").href = `equipment.html?category${cat.category}`;
+  clone.querySelector("a").textContent = cat.category;
+  clone.querySelector("a").href = `equipment.html?category${cat.category}`;
 
-//   document.querySelector("ol").appendChild(clone);
-// }
+  document.querySelector("ol").appendChild(clone);
+}
