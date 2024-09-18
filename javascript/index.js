@@ -5,10 +5,8 @@ window.addEventListener("DOMContentLoaded", init);
 
 //henter URL'en med data fra supabase
 
-const categoriesGrid = document.querySelector(".categoriesGrid");
-
 function init() {
-  fetch(`https://wbceqwohnppgnysnvrai.supabase.co/rest/v1/bob`, {
+  fetch("https://wbceqwohnppgnysnvrai.supabase.co/rest/v1/bob", {
     method: "GET",
     headers: {
       apikey:
@@ -17,9 +15,6 @@ function init() {
   })
     .then((res) => res.json())
     .then((data) => handleData(data));
-
-  console.log("cat");
-  console.log(data);
 }
 
 function handleData(info) {
@@ -30,8 +25,7 @@ function show(item) {
   const categoriesGrid = document.querySelector(".categoriesGrid");
   const templateCat = document.querySelector("template").content;
   const clone = templateCat.cloneNode(true);
-  console.log("cat");
-  console.log(info.category);
+
   categoriesGrid.appendChild(clone);
 }
 
