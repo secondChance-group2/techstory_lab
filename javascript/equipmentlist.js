@@ -29,7 +29,7 @@ function showProduct(product) {
   const copy = template.cloneNode(true);
   //ændre indhold
 
-  copy.querySelector("h3").textContent = category;
+  copy.querySelector("h3").textContent = tsl.category;
 
   //appende
   main.appendChild(copy);
