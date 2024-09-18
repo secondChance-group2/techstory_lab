@@ -12,7 +12,7 @@ function init() {
   if (params.has("category")) {
     productsURI = `https://wbceqwohnppgnysnvrai.supabase.co/rest/v1/tsl?category=${category}`;
   } else {
-    productsURI = `https://wbceqwohnppgnysnvrai.supabase.co/rest/v1/tsl?limit=100`;
+    productsURI = `https://wbceqwohnppgnysnvrai.supabase.co/rest/v1/tsl?limit=10`;
   }
   fetch(productsURI)
     .then((res) => res.json())

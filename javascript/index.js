@@ -26,7 +26,7 @@ function bygKatNav(data) {
     if (kat != "") {
       let knap = document.createElement("a");
       knap.textContent = kat;
-      knap.href = `liste.html?kategori=${kat}`;
+      knap.href = `equipmentlist.html?category=${kat}`;
       document.querySelector("#KatNav").appendChild(knap);
     }
   });
