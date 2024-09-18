@@ -28,4 +28,27 @@
     padding: 20px; /* Optional: padding for content spacing */
     margin-top: 70px;
   }
+
+  .categoriesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .sensor {
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    background-color: #1c78c14c;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .accessories {
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    background-color: #1c78c14c;
+    padding: 10px;
+    margin: 10px;
+  }
 }
