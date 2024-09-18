@@ -1,3 +1,13 @@
+:root {
+  --primary-color: #fefcfc;
+  --secondary-color: #eb5c8d;
+  font-family: Arial, Helvetica, sans-serif;
+  --h1-font-size: 36px;
+  --h2-font-size: 24px;
+  --h3-font-size: 18px;
+  --p-font-size: 14px;
+}
+
 /*************** RESET *********************/
 * {
   margin: 0;
@@ -10,8 +20,30 @@ img {
   display: block;
 }
 body {
-  background-color: #fefcfc;
+  --primary-color: var(--primary-color);
 }
+/**************** Hero Image ********************/
+.hero-container {
+  position: relative; /* Create a positioning context for the child elements */
+}
+
+.heroimg {
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+.overlayText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+}
+
 /**************** MENU ********************/
 .flex_menu {
   display: flex;
@@ -24,6 +56,33 @@ body {
 
 .logo {
   width: 100px;
+}
+
+/* Container for søgeikon og søgefelt */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+/* Style til søgeikonet */
+.search-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Style til søgefeltet */
+.search-field {
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
 }
 
 /* Centrer desktop-menuen */
@@ -92,6 +151,11 @@ nav {
   display: block; /* Vist når aktiv */
 }
 
+/************* Blue heading **************/
+.color_diff {
+  color: #1366b0;
+}
+
 /* Responsiv styling */
 @media screen and (max-width: 800px) {
   .burger {
@@ -100,6 +164,50 @@ nav {
 
   .menu {
     display: none; /* Skjult på mobile enheder */
+  }
+  .search-container {
+    margin-right: 25px;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+  }
+
+  .heroContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    color: white;
+    max-width: 80%;
+    padding: 10px;
+    font-size: 0.5em;
+    white-space: nowrap;
+  }
+
+  .color_diff {
+    display: inline;
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 8px;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 8px;
+  }
+
+  p {
+    font-size: 15px;
+    margin: 8px;
   }
 }
 

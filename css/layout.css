@@ -1,0 +1,31 @@
+@media screen and (max-width: 800px) {
+  .info {
+    margin-top: 70px;
+    margin-left: 20px;
+  }
+
+  .info p {
+    margin-top: 20px;
+  }
+
+  .studentCard {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Adjust column sizes as needed */
+    grid-gap: 10px; /* Optional: space between columns */
+    width: 90%;
+    height: auto;
+    margin-left: 20px;
+    background-color: #1c78c14c; /* Background color for the entire box */
+    margin-top: 50px;
+  }
+  .EquipmentBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    width: auto;
+    height: auto;
+    background-color: #1c78c14c; /* Background color for the entire box */
+    padding: 20px; /* Optional: padding for content spacing */
+    margin-top: 70px;
+  }
+}
