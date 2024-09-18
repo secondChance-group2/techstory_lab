@@ -15,22 +15,19 @@ const options = {
 
 fetch(url, options)
   .then((res) => res.json())
-  .then(showCategories);
+  .then(bygKatNav);
 
-function showCategories(cats) {
-  console.log(cats);
-  cats.forEach(showCategory);
-}
-
-//Viser data
-
-function showCategory(cat) {
-  const template = document.querySelector("template").content;
-
-  const clone = template.cloneNode(true);
-
-  clone.querySelector("a").textContent = cat.category;
-  clone.querySelector("a").href = `equipment.html?category${cat.category}`;
-
-  document.querySelector("ol").appendChild(clone);
+function bygKatNav(data) {
+  //den piller en af hver ud og kategoriserer, looper igennem og tager en af hver
+  const katOnce = new Set(data.map((elm) => elm.category));
+  console.log(katOnce);
+  katOnce.forEach((kat) => {
+    //med if laver den IKKE en tom knap
+    if (kat != "") {
+      let knap = document.createElement("a");
+      knap.textContent = kat;
+      knap.href = `equipmentlist.html?category=${kat}`;
+      document.querySelector("#KatNav").appendChild(knap);
+    }
+  });
 }

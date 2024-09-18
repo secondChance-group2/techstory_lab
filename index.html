@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/generel.css">
-  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="layout.css">
   <title>Tech and Story lab</title>
 </head>
 
@@ -30,26 +30,14 @@
         </nav>
       </div>
     </div>
-    <div class="search-container">
-      <!-- Klikbart billede/ikon -->
-      <img src="./img/soegefelt.png" id="search-icon" alt="Søg" class="search-icon" onclick="toggleSearch()">
-
-      <!-- Søgefelt, skjult som udgangspunkt -->
-      <input type="text" id="search-field" class="search-field" placeholder="Søg..." style="display: none;">
-    </div>
 
   </header>
 
   <main>
-    <div class="heroContainer">
-      <img class="heroimg" src="img/Heroimage.webp" alt="Heroimage">
-      <div class="overlayText">
-        <h1>Tech & Story Lab</h1>
-      </div>
-    </div>
+    <img class="heroimg" src="img/Heroimage.webp" alt="Heroimage">
 
     <section>
-      <div class="info">
+      <div>
         <h2>
           <div class="color_diff">Tech & Story Lab</div>
           focus on new technology for KEA's students, teachers and other
@@ -63,24 +51,20 @@
           large selection of equipment and get expert guidance in using it.
         </p>
       </div>
-      <div class="studentCard">
-        <div>
-          <h3>Remember your student card</h3>
-          <p>
-            To borrow equipment and use our facilities, remember to bring your
-            student card.
-          </p>
-          <p>
-            The student card must be valid and may only be used by the card
-            owner.
-          </p>
-        </div>
-        <div>
-          <img src="img/studiekort.webp" alt="studiekort" />
-        </div>
+      <div>
+        <h3>Remember your student card</h3>
+        <p>
+          To borrow equipment and use our facilities, remember to bring your
+          student card.
+        </p>
+        <p>
+          The student card must be valid and may only be used by the card
+          owner.
+        </p>
+        <img src="img/studiekort.webp" alt="studiekort" />
       </div>
     </section>
-    <section class="EquipmentBox">
+    <section>
       <h3>
         Equipment in
         <div class="color_diff">Tech & Story Lab</div>
@@ -105,10 +89,11 @@
     <h4>CATEGORIES</h4>
     <p>Here you can get an overview of our different types of equipment.</p>
     <ol id="categoryList"></ol>
+    <nav id="KatNav"></nav>
 
     <section class="categories">
       <template>
-        <li>
+        <li class="list">
           <a class="equipments" href="equipmentlist.html"></a>
         </li>
       </template>
@@ -177,7 +162,6 @@
   </main>
   <script src="/javascript/index.js"></script>
   <script src="/javascript/burger.js"></script>
-  <script src="/javascript/soegefelt.js"></script>
 </body>
 
 </html>
