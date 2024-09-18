@@ -1,3 +1,118 @@
+/*************** RESET *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body {
+  background-color: #fefcfc;
+}
+/**************** MENU ********************/
+.flex_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefcfc;
+  padding: 10px;
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+}
+
+/* Centrer desktop-menuen */
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  padding: 10px;
+  color: #1366b0;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #626262;
+}
+
+/********* BURGER ********/
+.burger {
+  display: none; /* Skjult på desktop */
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 99; /* gør så den altid ligger øverst */
+}
+
+.burger .line,
+.burger::after,
+.burger::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #1366b0;
+  margin: 5px 0;
+  transition: 0.2s;
+}
+
+/* Mobil-menu styling */
+.mobil_nav {
+  display: none; /* Skjult som standard */
+  background-color: #fefcfc;
+  width: 100%;
+  z-index: 98;
+  border-bottom: 1px solid #fefcfc;
+}
+
+.mobil_nav a {
+  display: block;
+  padding: 15px;
+  color: #1366b0;
+  text-decoration: none;
+}
+
+/* Vis mobil-menu når burger-knappen er klikker */
+.mobil_nav.is-active {
+  display: block; /* Vist når aktiv */
+}
+
+/* Responsiv styling */
+@media screen and (max-width: 800px) {
+  .burger {
+    display: block; /* Vist på mobile enheder */
+  }
+
+  .menu {
+    display: none; /* Skjult på mobile enheder */
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .burger {
+    display: none; /* Skjult på desktop */
+  }
+
+  .mobil_nav {
+    display: none; /* Skjult på desktop */
+  }
+}
+
 /*Styling forms*/
 form {
   width: 25rem;
