@@ -15,7 +15,7 @@ function init() {
     productsURI = `https://wbceqwohnppgnysnvrai.supabase.co/rest/v1/tsl?limit=10`;
   }
   fetch(
-    `https://wbceqwohnppgnysnvrai.supabase.co/rest/v1/tsl?limit=5&category=eq.${category}`,
+    `https://wbceqwohnppgnysnvrai.supabase.co/rest/v1/tsl?limit=6&category=eq.${category}`,
     {
       method: "GET",
       headers: {
