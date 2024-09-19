@@ -22,9 +22,15 @@ function handleData(info) {
 }
 
 function show(item) {
+  // console.log("item", item);
   const categoriesGrid = document.querySelector(".categoriesGrid");
   const templateCat = document.querySelector("template").content;
   const clone = templateCat.cloneNode(true);
+  clone.querySelector("h3").textContent = item.category;
+  clone.querySelector("img").src = `img/${item.picture}`;
+  clone.querySelector(
+    "a"
+  ).href = `equipmentlist.html?category=${item.category}`;
 
   categoriesGrid.appendChild(clone);
 }

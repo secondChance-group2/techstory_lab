@@ -43,6 +43,9 @@ function showProduct(product) {
   copy.querySelector(".brand2").textContent = product.brand;
   copy.querySelector(".product_name").textContent = product.product_name_model;
   copy.querySelector(".type2").textContent = product.type;
+  copy.querySelector("a").href = `singleview.html?ID=${product.ID}`;
+  //placeholder billede
+  copy.querySelector("img").src = `img/kat_eks_camera.webp`;
   //appende
   main.appendChild(copy);
 }
