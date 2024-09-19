@@ -2,10 +2,29 @@
   --primary-color: #fefcfc;
   --secondary-color: #eb5c8d;
   font-family: Arial, Helvetica, sans-serif;
-  --h1-font-size: 36px;
-  --h2-font-size: 24px;
-  --h3-font-size: 18px;
-  --p-font-size: 14px;
+  --h1-font-size: 4rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --p-font-size: 1rem;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  color: #4f4f4f;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+p {
+  font-size: var(--p-font-size);
 }
 
 /*************** RESET *********************/
@@ -66,6 +85,8 @@ body {
   position: absolute;
   right: 20px;
   top: 10px;
+  width: auto;
+  height: 30px;
 }
 
 /* Style til søgeikonet */
@@ -109,47 +130,65 @@ nav {
 }
 
 /********* BURGER ********/
+/* Desktop Menu */
+.menu {
+  display: flex;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #1366b0;
+}
+
+.menu a:hover {
+  color: #626262;
+}
+
+/* Burger Menu */
 .burger {
-  display: none; /* Skjult på desktop */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
   width: 30px;
   height: 20px;
   cursor: pointer;
-  position: relative;
-  z-index: 99; /* gør så den altid ligger øverst */
-  margin-left: auto;
 }
 
-.burger .line,
-.burger::after,
-.burger::before {
-  content: "";
-  display: block;
+.burger .line {
   width: 100%;
   height: 2px;
   background-color: #1366b0;
-  margin: 5px 0;
-  transition: 0.2s;
 }
 
-/* Mobil-menu styling */
 .mobil_nav {
-  display: none; /* Skjult som standard */
+  display: none;
+  flex-direction: column;
   background-color: #fefcfc;
   width: 100%;
-  z-index: 98;
-  border-bottom: 1px solid #fefcfc;
+  position: absolute;
+  top: 60px;
+  left: 0;
 }
 
 .mobil_nav a {
-  display: block;
   padding: 15px;
-  color: #1366b0;
   text-decoration: none;
+  color: #1366b0;
+  display: block;
 }
 
-/* Vis mobil-menu når burger-knappen er klikker */
+/* Mobil Menu Active State */
 .mobil_nav.is-active {
-  display: block; /* Vist når aktiv */
+  display: flex;
 }
 
 /************* Blue heading **************/
@@ -160,17 +199,7 @@ nav {
 /* Responsiv styling */
 @media screen and (max-width: 800px) {
   .burger {
-    display: block; /* Vist på mobile enheder */
-    position: fixed;
-    right: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #f9efe0;
-    width: 50%;
-    text-align: center;
-    transition: 0.3s;
-    z-index: 10;
+    display: flex; /* Vist på mobile enheder */
   }
 
   .menu {
@@ -178,8 +207,9 @@ nav {
   }
   .search-container {
     margin-right: 25px;
-    width: 20px;
-    height: 20px;
+    margin-top: 6px;
+    width: 15px;
+    height: 15px;
     padding: 5px;
   }
 
@@ -205,6 +235,8 @@ nav {
   .color_diff {
     display: inline;
     font-size: 20px;
+    color: #1366b0;
+    font-size: inherit;
   }
 
   h2 {
@@ -212,13 +244,21 @@ nav {
     margin: 8px;
   }
   h3 {
-    font-size: 15px;
+    font-size: 23px;
     margin: 8px;
+    font-weight: lighter;
   }
 
   p {
     font-size: 15px;
     margin: 8px;
+  }
+
+  .studentCardText {
+    font-size: 23px;
+    margin: 8px;
+    font-weight: lighter;
+    color: #1366b0;
   }
 }
 
@@ -245,7 +285,7 @@ textarea,
 
 form {
   width: 25rem;
-  background: linear-gradient(to right, #1366b0, #afafaf);
+  background: linear-gradient(to bottom, rgba(19, 102, 176, 0.3), rgba(175, 175, 175, 0.3));
   border: 10px solid #fefcfc;
   margin: 20px;
 }
