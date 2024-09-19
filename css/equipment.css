@@ -1,0 +1,30 @@
+#equipment_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.content {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.equipment img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.equipment h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.equipment p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #555;
+}
