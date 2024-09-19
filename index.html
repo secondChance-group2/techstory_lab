@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/generel.css" />
-    <link rel="stylesheet" href="/css/layout.css" />
-    <title>Tech and Story lab</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="flex_menu">
-        <div class="logo">
-          <a href="index.html"><img src="img/logo_red.svg" alt="Logo" /></a>
-        </div>
-        <nav>
-          <ul class="menu">
-            <li><a href="equipmentlist.html">Equipmentlist</a></li>
-            <li><a href="singleview.html">Singleview</a></li>
-          </ul>
-        </nav>
-        <div class="burger">
-          <div class="line"></div>
-          <nav class="mobil_nav">
-            <a href="index.html">Frontpage</a>
-            <a href="equipmentlist.html">Equipmentlist</a>
-            <a href="singleview.html">Singleview</a>
-          </nav>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/generel.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <title>Tech and Story lab</title>
+</head>
+
+<body>
+  <header>
+    <div class="flex_menu">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo_red.svg" alt="Logo" /></a>
       </div>
-    </header>
+      <nav class="menu">
+        <ul>
+          <li><a href="equipmentlist.html">Equipmentlist</a></li>
+          <li><a href="singleview.html">Singleview</a></li>
+        </ul>
+      </nav>
 
-    <main>
-      <img class="heroimg" src="img/Heroimage.webp" alt="Heroimage" />
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <nav class="mobil_nav">
+      <a href="index.html">Frontpage</a>
+      <a href="equipmentlist.html">Equipmentlist</a>
+      <a href="singleview.html">Singleview</a>
+    </nav>
 
-      <section>
-        <div class="info">
-          <h2>
-            <div class="color_diff">Tech & Story Lab</div>
-            focus on new technology for KEA's students, teachers and other
-            employees.
-          </h2>
-          <p>
-            In the Tech & Story Lab you can experiment with new technology and
-            learn to work with different equipment on your own. We have
-            everything from cameras, microphones and lighting equipment to VR
-            gear, AI technologies, RaspberryPi's and much more. You can borrow a
-            large selection of equipment and get expert guidance in using it.
-          </p>
-        </div>
-        <div class="studentCard">
-          <h3>Remember your student card</h3>
-          <p>
-            To borrow equipment and use our facilities, remember to bring your
-            student card.
-          </p>
-          <p>
-            The student card must be valid and may only be used by the card
-            owner.
-          </p>
-          <img src="img/studiekort.webp" alt="studiekort" />
-        </div>
-      </section>
-      <section class="EquipmentBox">
+    <div class="search-container">
+      <input type="text" id="search-field" class="search-field" placeholder="Søg..." style="display: none;">
+      <img src="./img/soegefelt.png" id="search-icon" alt="Søg" class="search-icon" onclick="toggleSearch()">
+    </div>
+
+  </header>
+
+  <main>
+    <img class="heroimg" src="img/Heroimage.webp" alt="Heroimage" />
+
+    <section class="infoStudentCard">
+      <div class="info">
+        <h2>
+          <div class="color_diff">Tech & Story Lab</div>
+          focus on new technology for KEA's students, <span class="break">teachers and other employees.</span>
+        </h2>
+
+        <p>
+          In the Tech & Story Lab you can experiment with new technology and
+          learn to work with different equipment on your own. We have
+          everything from cameras, microphones and lighting equipment to VR
+          gear, AI technologies, RaspberryPi's and much more. You can borrow a
+          large selection of equipment and get expert guidance in using it.
+        </p>
+      </div>
+      <div class="studentCard">
+        <h3 class="studentCardText">Remember your student card</h3>
+        <p>
+          To borrow equipment and use our facilities, remember to bring your
+          student card.
+        </p>
+        <p>
+          The student card must be valid and may only be used by the card
+          owner.
+        </p>
+        <img src="img/studiekort.webp" alt="studiekort" />
+      </div>
+    </section>
+    <section class="EquipmentBox">
+      <div class="equipmentText">
         <h3>
           Equipment in
           <div class="color_diff">Tech & Story Lab</div>
@@ -81,30 +92,29 @@
           To book and have equipment delivered, visit us in the Tech & Story
           Lab.
         </p>
-        <img src="img/map.webp" alt="map" />
-      </section>
+      </div>
+      <img src="img/map.webp" alt="map" />
+    </section>
 
-      <h4>CATEGORIES</h4>
-      <p>Here you can get an overview of our different types of equipment.</p>
+    <h1>CATEGORIES</h1>
+    <p>Here you can get an overview of our different types of equipment.</p>
 
-      <section class="categories">
-        <template>
-          <a href="" class="list">
-            <img src="" alt="" />
-            <h3></h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              doloremque similique laboriosam assumenda eligendi ipsum, expedita
-              deserunt atque consectetur possimus corporis, hic laudantium
-              aperiam maxime fugit, neque nisi? Maxime, animi.
-            </p>
-          </a>
-        </template>
+    <section class="categories">
+      <template class="categoryGrid">
+        <a href="" class="list">
+          <img src="" alt="" />
+          <h3 class="categoryHeader"></h3>
+        </a>
+      </template>
 
-        <div class="categoriesGrid"></div>
-      </section>
+      <div class="categoriesGrid"></div>
+    </section>
 
-      <section>
+    <div class="gradient-line"></div>
+
+
+    <section class="access">
+      <div class="accessText">
         <h3>
           Access to
           <div class="color_diff">Tech & Story Lab</div>
@@ -121,66 +131,102 @@
           If you have questions for Tech & Story Lab, you are always welcome to
           stop by or send us an mail.
         </p>
-      </section>
+      </div>
+      <div>
+        <p class="video"> video her</p>
+      </div>
+    </section>
+    <div class="gradient-line"></div>
 
-      <section>
-        <h4>Contact us</h4>
-        <div>
-          <img src="img/luca.webp" alt="Luca Fusco" />
-          <p>Luca Fusco</p>
-          <p>makerlab@kea.dk</p>
-        </div>
-        <div>
-          <img src="img/frederik.webp" alt="Frederick Lehmann Rosling" />
-          <p>Frederick Lehmann Rosling</p>
-          <p>T: 46 46 04 42</p>
-          <p>E: techandstorylab@kea.dk</p>
-        </div>
-        <div>
-          <img src="img/simon.webp" alt="Simon Benjamin Christensen" />
-          <p>Frederick Lehmann Rosling</p>
-          <p>makerlab@kea.dk</p>
-        </div>
-      </section>
+    <section class="contact">
+      <h4>Contact us</h4>
+      <div class="contactCard">
+        <img src="img/luca.webp" alt="Luca Fusco" />
+        <p>Luca Fusco</p>
+        <p>makerlab@kea.dk</p>
+      </div>
+      <div class="contactCard">
+        <img src="img/frederik.webp" alt="Frederick Lehmann Rosling" />
+        <p>Frederick Lehmann Rosling</p>
+        <p>Tlf: 46 46 04 42</p>
+        <p>E-mail: techandstorylab@kea.dk</p>
+      </div>
+      <div class="contactCard">
+        <img src="img/simon.webp" alt="Simon Benjamin Christensen" />
+        <p>Frederick Lehmann Rosling</p>
+        <p>makerlab@kea.dk</p>
+      </div>
+    </section>
 
-      <form name="Contact" netlify>
-        <h1>If you have any questions</h1>
-        <p>Please fill in the form below</p>
-        <fieldset id="data-area">
-          <div class="row"><label for="name">Name</label></div>
-          <div class="row">
-            <input type="name" placeholder="Kim Kimsen" name="name" required />
-          </div>
-          <div class="row"><label for="email">Email</label></div>
-          <div class="row">
-            <input
-              type="email"
-              placeholder="email@email.com"
-              name="email"
-              required
-            />
-          </div>
-          <div class="row">
-            <label for="question">Ask your question here</label>
-          </div>
+    <form name="Contact" netlify>
+      <h1>If you have any questions</h1>
+      <p>Please fill in the form below</p>
+      <fieldset id="data-area">
+        <div class="row"><label for="name">Name</label></div>
+        <div class="row">
+          <input type="name" placeholder="Kim Kimsen" name="name" required />
+        </div>
+        <div class="row"><label for="email">Email</label></div>
+        <div class="row">
+          <input type="email" placeholder="email@email.com" name="email" required />
+        </div>
+        <div class="row">
+          <label for="question">Ask your question here</label>
+        </div>
 
-          <textarea
-            class="question"
-            type="question"
-            placeholder="Your question"
-            name="question"
-          >
+        <textarea class="question" type="question" placeholder="Your question" name="question">
           </textarea>
-          <button type="submit" class="submit">Send</button>
-        </fieldset>
-      </form>
-    </main>
+        <button type="submit" class="submit">Send</button>
+      </fieldset>
+    </form>
+  </main>
 
+  <footer>
     <footer>
-      <img src="img/footer_img.webp" alt="footerimg" />
+      <div class="footer">
+        <div class="address">
+          <h4>KEA - Copenhagen School of Design & Technology</h4>
+          <p>Guldbergsgade 29N DK - 2200 København N</p>
+        </div>
+        <div class="forStudents">
+          <h4>For students</h4>
+          <ul>
+            <li>Study and Career Guidance</li>
+            <li>Study Administration</li>
+            <li>SPS (special educational support)</li>
+            <li>SU Guidance</li>
+            <li>Internship</li>
+          </ul>
+        </div>
+        <div class="links">
+          <h4>Relevant links</h4>
+          <ul>
+            <li>KEA Library</li>
+            <li>Itslearning</li>
+            <li>Subject and course catalogue</li>
+            <li>Active enrolment model</li>
+            <li>Code of conduct</li>
+          </ul>
+        </div>
+        <div class="practicalInfo">
+          <h4>Practical information</h4>
+          <ul>
+            <li>Cookies and privacy</li>
+            <li>Data Protection Policy</li>
+            <li>Find your way at KEA</li>
+          </ul>
+        </div>
+        <div class="socialMedia">
+          <img src="img/instagram.webp" alt="instagram">
+          <img src="img/facebook.webp" alt="facebook">
+          <img src="img/linkedin.webp" alt="linkedin">
+        </div>
+      </div>
     </footer>
 
     <script src="/javascript/index.js"></script>
     <script src="/javascript/burger.js"></script>
-  </body>
+    <script src="/javascript/soegefelt.js"></script>
+</body>
+
 </html>
