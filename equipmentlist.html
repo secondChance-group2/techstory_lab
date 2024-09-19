@@ -21,13 +21,30 @@
         </nav>
         <div class="burger">
           <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
           <nav class="mobil_nav">
             <a href="index.html">Frontpage</a>
             <a href="equipmentlist.html">Equipmentlist</a>
             <a href="singleview.html">Singleview</a>
           </nav>
-        </div>
-      </div>
+          <div class="search-container">
+            <input
+              type="text"
+              id="search-field"
+              class="search-field"
+              placeholder="Søg..."
+              style="display: none"
+            />
+            <img
+              src="./img/soegefelt.png"
+              id="search-icon"
+              alt="Søg"
+              class="search-icon"
+              onclick="toggleSearch()"
+            />
+          </div>
     </header>
     <main class="container">
       <h1></h1>
@@ -48,8 +65,7 @@
       <div class="gradient-loop"></div>
 
       <form name="Contact" netlify>
-        <h1>If you have any questions</h1>
-        <p>Please fill in the form below</p>
+        <h3 class="if">If you have any questions...</h3>
         <fieldset id="data-area">
           <div class="row"><label for="name">Name</label></div>
           <div class="row">
@@ -85,5 +101,6 @@
     </footer>
     <script src="/javascript/equipmentlist.js"></script>
     <script src="/javascript/burger.js"></script>
+    <script src="/javascript/soegefelt.js"></script>
   </body>
 </html>
