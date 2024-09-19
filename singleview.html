@@ -11,6 +11,38 @@
 </head>
 
 <body>
+
+  <header>
+    <div class="flex_menu">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo_red.svg" alt="Logo" /></a>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="equipmentlist.html">Equipmentlist</a></li>
+          <li><a href="singleview.html">Singleview</a></li>
+        </ul>
+      </nav>
+
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <nav class="mobil_nav">
+      <a href="index.html">Frontpage</a>
+      <a href="equipmentlist.html">Equipmentlist</a>
+      <a href="singleview.html">Singleview</a>
+    </nav>
+
+    <div class="search-container">
+      <input type="text" id="search-field" class="search-field" placeholder="Søg..." style="display: none;">
+      <img src="./img/soegefelt.png" id="search-icon" alt="Søg" class="search-icon" onclick="toggleSearch()">
+    </div>
+
+  </header>
+
   <main>
     <h1>CAMERA</h1>
     <section class="info">
