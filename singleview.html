@@ -11,47 +11,72 @@
 </head>
 
 <body>
+  <header>
+    <div class="flex_menu">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo_red.svg" alt="Logo" /></a>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="equipmentlist.html">Equipmentlist</a></li>
+          <li><a href="singleview.html">Singleview</a></li>
+        </ul>
+      </nav>
+
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <nav class="mobil_nav">
+      <a href="index.html">Frontpage</a>
+      <a href="equipmentlist.html">Equipmentlist</a>
+      <a href="singleview.html">Singleview</a>
+    </nav>
+
+    <div class="search-container">
+      <input type="text" id="search-field" class="search-field" placeholder="Søg..." style="display: none" />
+      <img src="./img/soegefelt.png" id="search-icon" alt="Søg" class="search-icon" onclick="toggleSearch()" />
+    </div>
+  </header>
+
   <main>
-    <h1>CAMERA</h1>
+    <h1 class="single_header">CAMERA</h1>
     <section class="info">
       <img class="single_img" src="" alt="" />
       <dl>
         <dt></dt>
         <dd class="modelName"></dd>
+
         <dt></dt>
         <dd class="type"></dd>
         <dt></dt>
         <dd class="brand"></dd>
       </dl>
-      <button>CHECK AVAILABILITY</button>
+
+      <button class="web_knap">CHECK AVAILABILITY</button>
     </section>
 
     <div class="gradient-loop"></div>
 
 
-    <h3>You might also need</h3>
     <section class="you_need">
+      <h3 class="you_need_h3">You might also need</h3>
 
-      <div>
-        <img src="img/kat_eks_sd.webp" alt="SD-card" />
-        <p>SD-CARD</p>
-      </div>
-      <div>
-        <img src="img/single_eks.webp" alt="Camera" />
-        <p>CAMERA</p>
-      </div>
-      <div>
-        <img src="img/kat_eks_tripods.webp" alt="Tripod" />
-        <p>TRIPOD</p>
-      </div>
-      <div>
-        <img src="img/kat_eks_photo_studio.webp" alt="Studio" />
-        <p>STUDIO</p>
-      </div>
-      <div>
-        <img src="img/cats_eks.webp" alt="Camera" />
-        <p>CAMERA</p>
-      </div>
+
+      <img class="sd_img" src="img/kat_eks_sd.webp" alt="SD-card" />
+      <p class="sd_p">SD-CARD</p>
+      <img class="camara_img" src="img/cats_eks.webp" alt="Camera" />
+      <p class="camara_p">CAMERA</p>
+      <img class="tripod_img" src="img/kat_eks_tripods.webp" alt="Tripod" />
+      <p class="tripod_p">TRIPOD</p>
+      <img class="studio_img" src="img/kat_eks_photo_studio.webp" alt="Studio" />
+      <p class="studio_p">STUDIO</p>
+      <img class="camara2_img" src="img/cats_eks.webp" alt="Camera" />
+      <p class="camara2_p">CAMERA</p>
+
+
     </section>
   </main>
   <script src="/javascript/singleview.js"></script>
