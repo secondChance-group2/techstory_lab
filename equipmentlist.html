@@ -3,16 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/equipment.css" />
     <title>Equipments</title>
   </head>
   <body>
+    <header>
+      <div class="flex_menu">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo_red.svg" alt="Logo" /></a>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="equipmentlist.html">Equipmentlist</a></li>
+            <li><a href="singleview.html">Singleview</a></li>
+          </ul>
+        </nav>
+        <div class="burger">
+          <div class="line"></div>
+          <nav class="mobil_nav">
+            <a href="index.html">Frontpage</a>
+            <a href="equipmentlist.html">Equipmentlist</a>
+            <a href="singleview.html">Singleview</a>
+          </nav>
+        </div>
+      </div>
+    </header>
     <main class="container">
       <h1></h1>
       <div id="equipment_container"></div>
       <template id="equipmentTemplate">
         <article class="content">
           <a href="" class="equipment">
-            <img src="" alt="">
+            <img src="" alt="" />
             <h3 class="product_name"></h3>
             <p class="brand2"></p>
             <p class="type2"></p>
@@ -20,7 +43,7 @@
         </article>
       </template>
 
-      <form name="Contact" netlify></form>
+      <form name="Contact" netlify>
         <h1>If you have any questions</h1>
         <p>Please fill in the form below</p>
         <fieldset id="data-area">
@@ -51,8 +74,12 @@
           <button type="submit" class="submit">Send</button>
         </fieldset>
       </form>
-
     </main>
+
+    <footer>
+      <img src="img/footer_img.webp" alt="footerimg" />
+    </footer>
     <script src="/javascript/equipmentlist.js"></script>
+    <script src="/javascript/burger.js"></script>
   </body>
 </html>
