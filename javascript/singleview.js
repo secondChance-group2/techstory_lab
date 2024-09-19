@@ -19,7 +19,7 @@ function showProduct(items) {
   document.querySelector(".modelName").textContent = item.product_name_model;
   document.querySelector(".type").textContent = item.type;
   document.querySelector(".brand").textContent = item.brand;
-  document.querySelector("img").src = `img/kat_eks_udstyr.webp`;
+  document.querySelector(".single_img").src = `img/kat_eks_udstyr.webp`;
 }
 
 //function showProduct(product) {
