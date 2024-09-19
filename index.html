@@ -14,33 +14,54 @@
         <div class="logo">
           <a href="index.html"><img src="img/logo_red.svg" alt="Logo" /></a>
         </div>
-        <nav>
-          <ul class="menu">
+        <nav class="menu">
+          <ul>
             <li><a href="equipmentlist.html">Equipmentlist</a></li>
             <li><a href="singleview.html">Singleview</a></li>
           </ul>
         </nav>
+
         <div class="burger">
           <div class="line"></div>
-          <nav class="mobil_nav">
-            <a href="index.html">Frontpage</a>
-            <a href="equipmentlist.html">Equipmentlist</a>
-            <a href="singleview.html">Singleview</a>
-          </nav>
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
+      </div>
+      <nav class="mobil_nav">
+        <a href="index.html">Frontpage</a>
+        <a href="equipmentlist.html">Equipmentlist</a>
+        <a href="singleview.html">Singleview</a>
+      </nav>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-field"
+          class="search-field"
+          placeholder="Søg..."
+          style="display: none"
+        />
+        <img
+          src="./img/soegefelt.png"
+          id="search-icon"
+          alt="Søg"
+          class="search-icon"
+          onclick="toggleSearch()"
+        />
       </div>
     </header>
 
     <main>
       <img class="heroimg" src="img/Heroimage.webp" alt="Heroimage" />
 
-      <section>
+      <section class="infoStudentCard">
         <div class="info">
           <h2>
             <div class="color_diff">Tech & Story Lab</div>
-            focus on new technology for KEA's students, teachers and other
-            employees.
+            focus on new technology for KEA's students,
+            <span class="break">teachers and other employees.</span>
           </h2>
+
           <p>
             In the Tech & Story Lab you can experiment with new technology and
             learn to work with different equipment on your own. We have
@@ -50,7 +71,7 @@
           </p>
         </div>
         <div class="studentCard">
-          <h3>Remember your student card</h3>
+          <h3 class="studentCardText">Remember your student card</h3>
           <p>
             To borrow equipment and use our facilities, remember to bring your
             student card.
@@ -63,80 +84,84 @@
         </div>
       </section>
       <section class="EquipmentBox">
-        <h3>
-          Equipment in
-          <div class="color_diff">Tech & Story Lab</div>
-        </h3>
-        <p>
-          You are always welcome to drop by us if you are looking for special
-          equipment for your project or need advice and guidance.
-        </p>
-        <p>
-          If you already know in advance which equipment you need, you can see
-          if the equipment is available in the booking module. Please note,
-          however, that the booking module is indicative - we cannot therefore
-          guarantee that all equipment is available.
-        </p>
-        <p>
-          To book and have equipment delivered, visit us in the Tech & Story
-          Lab.
-        </p>
+        <div class="equipmentText">
+          <h3>
+            Equipment in
+            <div class="color_diff">Tech & Story Lab</div>
+          </h3>
+          <p>
+            You are always welcome to drop by us if you are looking for special
+            equipment for your project or need advice and guidance.
+          </p>
+          <p>
+            If you already know in advance which equipment you need, you can see
+            if the equipment is available in the booking module. Please note,
+            however, that the booking module is indicative - we cannot therefore
+            guarantee that all equipment is available.
+          </p>
+          <p>
+            To book and have equipment delivered, visit us in the Tech & Story
+            Lab.
+          </p>
+        </div>
         <img src="img/map.webp" alt="map" />
       </section>
 
-      <h4>CATEGORIES</h4>
+      <h1>CATEGORIES</h1>
       <p>Here you can get an overview of our different types of equipment.</p>
 
       <section class="categories">
-        <template>
+        <template class="categoryGrid">
           <a href="" class="list">
             <img src="" alt="" />
-            <h3></h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              doloremque similique laboriosam assumenda eligendi ipsum, expedita
-              deserunt atque consectetur possimus corporis, hic laudantium
-              aperiam maxime fugit, neque nisi? Maxime, animi.
-            </p>
+            <h3 class="categoryHeader"></h3>
           </a>
         </template>
 
         <div class="categoriesGrid"></div>
       </section>
 
-      <section>
-        <h3>
-          Access to
-          <div class="color_diff">Tech & Story Lab</div>
-        </h3>
-        <p>
-          Tech & Story Lab is open to all students, teachers and other employees
-          at KEA.
-        </p>
-        <p>
-          You will find us at Guldbergsgade 29N, 2200 KBH N, on the ground floor
-          behind the reception. We are open Monday-Friday from 09-15.
-        </p>
-        <p>
-          If you have questions for Tech & Story Lab, you are always welcome to
-          stop by or send us an mail.
-        </p>
-      </section>
+      <div class="gradient-line"></div>
 
-      <section>
-        <h4>Contact us</h4>
+      <section class="access">
+        <div class="accessText">
+          <h3>
+            Access to
+            <div class="color_diff">Tech & Story Lab</div>
+          </h3>
+          <p>
+            Tech & Story Lab is open to all students, teachers and other
+            employees at KEA.
+          </p>
+          <p>
+            You will find us at Guldbergsgade 29N, 2200 KBH N, on the ground
+            floor behind the reception. We are open Monday-Friday from 09-15.
+          </p>
+          <p>
+            If you have questions for Tech & Story Lab, you are always welcome
+            to stop by or send us an mail.
+          </p>
+        </div>
         <div>
+          <p class="video">video her</p>
+        </div>
+      </section>
+      <div class="gradient-line"></div>
+
+      <section class="contact">
+        <h4>Contact us</h4>
+        <div class="contactCard">
           <img src="img/luca.webp" alt="Luca Fusco" />
           <p>Luca Fusco</p>
           <p>makerlab@kea.dk</p>
         </div>
-        <div>
+        <div class="contactCard">
           <img src="img/frederik.webp" alt="Frederick Lehmann Rosling" />
           <p>Frederick Lehmann Rosling</p>
-          <p>T: 46 46 04 42</p>
-          <p>E: techandstorylab@kea.dk</p>
+          <p>Tlf: 46 46 04 42</p>
+          <p>E-mail: techandstorylab@kea.dk</p>
         </div>
-        <div>
+        <div class="contactCard">
           <img src="img/simon.webp" alt="Simon Benjamin Christensen" />
           <p>Frederick Lehmann Rosling</p>
           <p>makerlab@kea.dk</p>
@@ -175,11 +200,13 @@
         </fieldset>
       </form>
     </main>
+
     <footer>
       <img src="img/footer_img.webp" alt="footerimg" />
     </footer>
 
     <script src="/javascript/index.js"></script>
     <script src="/javascript/burger.js"></script>
+    <script src="/javascript/soegefelt.js"></script>
   </body>
 </html>
