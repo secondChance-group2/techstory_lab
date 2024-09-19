@@ -1,3 +1,23 @@
+.image-container {
+  position: relative;
+  display: block;
+}
+.heroimg {
+  display: block;
+}
+.image-container .h1_master {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+}
+
+form {
+  margin-bottom: 5%;
+}
 /* Mobil first */
 @media screen and (max-width: 799px) {
   .info {
@@ -144,6 +164,7 @@
 
 /********* styles for desktop devices ********/
 @media only screen and (min-width: 800px) {
+  /*index*/
   h3 {
     display: flex;
     align-items: center;
@@ -169,11 +190,6 @@
     align-items: center;
     margin-bottom: 40px;
   }
-
-  .break {
-    display: inline-block;
-  }
-
   .info p {
     margin-top: 20px;
     max-width: 70ch;
@@ -183,10 +199,10 @@
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     width: 100%;
-    height: 324px;
+    height: 335px;
     margin-left: 26px;
     background-color: #1c78c14c;
-    padding-top: 5%;
+    padding: 5%;
 
     position: relative; /* Set this to position child elements absolutely within it */
   }
@@ -222,8 +238,9 @@
     max-width: 65ch;
   }
 
-  .equipmentText h3 {
+  .equipmentText h2 {
     margin-top: 4%;
+    color: #1366b0;
   }
   .map {
     grid-row: span 2 / span 2;
@@ -240,6 +257,9 @@
   }
   .open3 {
     color: #f0f0f0;
+  }
+  .cat_space {
+    margin-top: 8rem;
   }
   .categoriesGrid {
     display: grid;
@@ -267,16 +287,6 @@
     width: 20%;
     height: auto;
     grid-row: 1;
-  }
-
-  .gradient-line {
-    border-radius: 10px;
-    height: 15px; /* Højde på stregen */
-    background-image: linear-gradient(to right, #0d66ad, #eb5148);
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
 
   .access {
@@ -341,18 +351,6 @@
   }
 
   /*********** Footer *********/
-
-  .footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    background-image: linear-gradient(
-      to bottom,
-      #fefcfc 5%,
-      #f5a6a2 77%,
-      #eb5148 150%
-    );
-  }
 
   .socialMedia {
     display: flex;

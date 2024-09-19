@@ -19,7 +19,7 @@ h1 {
 h2 {
   font-size: var(--h2-font-size);
   font-weight: lighter;
-  color: #4f4f4f;
+  color: #1366b0;
   margin-left: 20px;
 }
 
@@ -56,14 +56,36 @@ img {
 body {
   --primary-color: var(--primary-color);
 }
+/*GRADIAN SLANGE */
+
+.gradient-loop {
+  width: 80%;
+  height: 20px; /* Juster højden efter behov */
+  background: linear-gradient(200deg, #1366b0, #9f96c9, #eb5c8d, #ea4e43);
+  background-size: 400% 400%;
+  margin: 100px;
+  margin-left: 10%;
+  margin-bottom: 100px;
+  border-radius: 10px 10px 10px 10px;
+  animation: gradientAnimation 1s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 /**************** Hero Image ********************/
 .hero-container {
   position: relative; /* Create a positioning context for the child elements */
 }
 
 .heroimg {
-  width: 100%; /* Adjust as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -76,6 +98,9 @@ body {
   text-align: center;
   padding: 20px;
   z-index: 1;
+}
+.h1_master {
+  width: 95%;
 }
 
 /**************** MENU ********************/
@@ -206,11 +231,6 @@ nav {
   display: flex;
 }
 
-/************* Blue heading **************/
-.color_diff {
-  color: #1366b0;
-}
-
 /* Responsiv styling */
 @media screen and (max-width: 800px) {
   .burger {
@@ -245,13 +265,6 @@ nav {
     padding: 10px;
     font-size: 0.5em;
     white-space: nowrap;
-  }
-
-  .color_diff {
-    display: inline;
-    font-size: 20px;
-    color: #1366b0;
-    font-size: inherit;
   }
 
   h2 {
@@ -308,6 +321,7 @@ form {
   );
   border: 10px solid #fefcfc;
   margin: 20px;
+  height: 30rem;
 }
 .if {
   margin-top: 30px;
@@ -355,22 +369,35 @@ footer {
   position: relative;
   width: 100%;
   margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background-image: linear-gradient(
+    to bottom,
+    #fefcfc 5%,
+    #f5a6a2 77%,
+    #eb5148 100%
+  );
+  min-height: 600px;
 }
-
-footer img {
+/* position: relative;
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  position: relative;
-  display: block;
-}
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background-image: linear-gradient(
+    to bottom,
+    #fefcfc 5%,
+    #f5a6a2 77%,
+    #eb5148 100%
+  ); */
 
 .footer_links {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
