@@ -15,34 +15,42 @@
       <div class="logo">
         <a href="index.html"><img src="img/logo_red.svg" alt="Logo" /></a>
       </div>
-      <nav>
-        <ul class="menu">
+      <nav class="menu">
+        <ul>
           <li><a href="equipmentlist.html">Equipmentlist</a></li>
           <li><a href="singleview.html">Singleview</a></li>
         </ul>
       </nav>
       <div class="burger">
         <div class="line"></div>
-        <nav class="mobil_nav">
-          <a href="index.html">Frontpage</a>
-          <a href="equipmentlist.html">Equipmentlist</a>
-          <a href="singleview.html">Singleview</a>
-        </nav>
+        <div class="line"></div>
+        <div class="line"></div>
       </div>
     </div>
+    <nav class="mobil_nav">
+      <a href="index.html">Frontpage</a>
+      <a href="equipmentlist.html">Equipmentlist</a>
+      <a href="singleview.html">Singleview</a>
+    </nav>
+
+    <div class="search-container">
+      <input type="text" id="search-field" class="search-field" placeholder="Søg..." style="display: none;">
+      <img src="./img/soegefelt.png" id="search-icon" alt="Søg" class="search-icon" onclick="toggleSearch()">
+    </div>
+
   </header>
 
   <main>
 
     <img class="heroimg" src="img/Heroimage.webp" alt="Heroimage" />
 
-    <section>
+    <section class="infoStudentCard">
       <div class="info">
         <h2>
           <div class="color_diff">Tech & Story Lab</div>
-          focus on new technology for KEA's students, teachers and other
-          employees.
+          focus on new technology for KEA's students, <span class="break">teachers and other employees.</span>
         </h2>
+
         <p>
           In the Tech & Story Lab you can experiment with new technology and
           learn to work with different equipment on your own. We have
@@ -52,38 +60,37 @@
         </p>
       </div>
       <div class="studentCard">
-        <h3>Remember your student card</h3>
+        <h3 class="studentCardText">Remember your student card</h3>
         <p>
           To borrow equipment and use our facilities, remember to bring your
-          student card.
-        </p>
-        <p>
-          The student card must be valid and may only be used by the card
+          student card.<br>The student card must be valid and may only be used by the card
           owner.
         </p>
         <img src="img/studiekort.webp" alt="studiekort" />
       </div>
     </section>
     <section class="EquipmentBox">
-      <h3>
-        Equipment in
-        <div class="color_diff">Tech & Story Lab</div>
-      </h3>
-      <p>
-        You are always welcome to drop by us if you are looking for special
-        equipment for your project or need advice and guidance.
-      </p>
-      <p>
-        If you already know in advance which equipment you need, you can see
-        if the equipment is available in the booking module. Please note,
-        however, that the booking module is indicative - we cannot therefore
-        guarantee that all equipment is available.
-      </p>
-      <p>
-        To book and have equipment delivered, visit us in the Tech & Story
-        Lab.
-      </p>
-      <img src="img/map.webp" alt="map" />
+      <div class="equipmentText">
+        <h3>
+          Equipment in
+          <div class="color_diff">Tech & Story Lab</div>
+        </h3>
+        <p>
+          You are always welcome to drop by us if you are looking for special
+          equipment for your project or need advice and guidance.
+        </p>
+        <p>
+          If you already know in advance which equipment you need, you can see
+          if the equipment is available in the booking module. Please note,
+          however, that the booking module is indicative - we cannot therefore
+          guarantee that all equipment is available.
+        </p>
+        <p>
+          To book and have equipment delivered, visit us in the Tech & Story
+          Lab.
+        </p>
+      </div>
+      <img class="map" src="img/map.webp" alt="map" />
     </section>
 
     <h4>CATEGORIES</h4>
@@ -112,7 +119,49 @@
 
         <div class="accessories">
           <img src="/img/accessories.webp" alt="accessories" />
-          <h3>SENSOR</h3>
+          <h3>ACCESSORIES</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            doloremque similique laboriosam assumenda eligendi ipsum, expedita
+            deserunt atque consectetur possimus corporis, hic laudantium
+            aperiam maxime fugit, neque nisi? Maxime, animi.
+          </p>
+        </div>
+        <div class="sound">
+          <img src="/img/sound.webp" alt="sound" />
+          <h3>SOUND</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            doloremque similique laboriosam assumenda eligendi ipsum, expedita
+            deserunt atque consectetur possimus corporis, hic laudantium
+            aperiam maxime fugit, neque nisi? Maxime, animi.
+          </p>
+        </div>
+
+        <div class="light">
+          <img src="/img/light.webp" alt="light" />
+          <h3>LIGHT</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            doloremque similique laboriosam assumenda eligendi ipsum, expedita
+            deserunt atque consectetur possimus corporis, hic laudantium
+            aperiam maxime fugit, neque nisi? Maxime, animi.
+          </p>
+        </div>
+        <div class="photoVideo">
+          <img src="/img/photo.webp" alt="photo&video" />
+          <h3>PHOTO & VIDEO</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            doloremque similique laboriosam assumenda eligendi ipsum, expedita
+            deserunt atque consectetur possimus corporis, hic laudantium
+            aperiam maxime fugit, neque nisi? Maxime, animi.
+          </p>
+        </div>
+
+        <div class="technology">
+          <img src="/img/technology.webp" alt="technology" />
+          <h3>TECHNOLOGY</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
             doloremque similique laboriosam assumenda eligendi ipsum, expedita
@@ -123,39 +172,47 @@
       </div>
     </section>
 
-    <section>
-      <h3>
-        Access to
-        <div class="color_diff">Tech & Story Lab</div>
-      </h3>
-      <p>
-        Tech & Story Lab is open to all students, teachers and other employees
-        at KEA.
-      </p>
-      <p>
-        You will find us at Guldbergsgade 29N, 2200 KBH N, on the ground floor
-        behind the reception. We are open Monday-Friday from 09-15.
-      </p>
-      <p>
-        If you have questions for Tech & Story Lab, you are always welcome to
-        stop by or send us an mail.
-      </p>
-    </section>
+    <div class="gradient-line"></div>
 
-    <section>
-      <h4>Contact us</h4>
+    <section class="access">
+      <div class="accessText">
+        <h3>
+          Access to
+          <div class="color_diff">Tech & Story Lab</div>
+        </h3>
+        <p>
+          Tech & Story Lab is open to all students, teachers and other employees
+          at KEA.
+        </p>
+        <p>
+          You will find us at Guldbergsgade 29N, 2200 KBH N, on the ground floor
+          behind the reception. We are open Monday-Friday from 09-15.
+        </p>
+        <p>
+          If you have questions for Tech & Story Lab, you are always welcome to
+          stop by or send us an mail.
+        </p>
+      </div>
       <div>
+        <p class="video">video her</p>
+      </div>
+    </section>
+    <div class="gradient-line"></div>
+
+    <section class="contact">
+      <h4>Contact us</h4>
+      <div class="contactCard">
         <img src="img/luca.webp" alt="Luca Fusco" />
         <p>Luca Fusco</p>
         <p>makerlab@kea.dk</p>
       </div>
-      <div>
+      <div class="contactCard">
         <img src="img/frederik.webp" alt="Frederick Lehmann Rosling" />
         <p>Frederick Lehmann Rosling</p>
-        <p>T: 46 46 04 42</p>
-        <p>E: techandstorylab@kea.dk</p>
+        <p>Tlf: 46 46 04 42</p>
+        <p>E-mail: techandstorylab@kea.dk</p>
       </div>
-      <div>
+      <div class="contactCard">
         <img src="img/simon.webp" alt="Simon Benjamin Christensen" />
         <p>Frederick Lehmann Rosling</p>
         <p>makerlab@kea.dk</p>
@@ -186,11 +243,139 @@
   </main>
 
   <footer>
-    <img src="img/footer_img.webp" alt="footerimg">
+    <div class="footer">
+      <div class="address">
+        <h4>KEA - Copenhagen School of Design & Technology</h4>
+        <p>Guldbergsgade 29N DK - 2200 København N</p>
+      </div>
+      <div class="forStudents">
+        <h4>For students</h4>
+        <ul>
+          <li>Study and Career Guidance</li>
+          <li>Study Administration</li>
+          <li>SPS (special educational support)</li>
+          <li>SU Guidance</li>
+          <li>Internship</li>
+        </ul>
+      </div>
+      <div class="links">
+        <h4>Relevant links</h4>
+        <ul>
+          <li>KEA Library</li>
+          <li>Itslearning</li>
+          <li>Subject and course catalogue</li>
+          <li>Active enrolment model</li>
+          <li>Code of conduct</li>
+        </ul>
+      </div>
+      <div class="practicalInfo">
+        <h4>Practical information</h4>
+        <ul>
+          <li>Cookies and privacy</li>
+          <li>Data Protection Policy</li>
+          <li>Find your way at KEA</li>
+        </ul>
+      </div>
+      <div class="socialMedia">
+        <img src="img/instagram.webp" alt="instagram">
+        <img src="img/facebook.webp" alt="facebook">
+        <img src="img/linkedin.webp" alt="linkedin">
+      </div>
+    </div>
+
+
+
+    <!-- <div class="footer-container">
+        <img src="img/footer_img.webp" alt="footerimg">
+        <section class="footer pd-top-md pd-bottom-md">
+          <div class="container">
+            <div class="row-flex">
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="moduletable">
+                  <h3>KEA - Københavns Erhvervsakademi</h3>
+                  <div class="contact-info">
+                    <p>Guldbergsgade 29N<br>2200 København N</p>
+                    <h5>Du skal ikke bare vide.<br>Du skal kunne.</h5>
+                  </div>
+                </div>
+                <div class="moduletable social-media">
+                  <p>
+                    <a href="https://www.facebook.com/KEAstudentlife/" title="Følg os på Facebook">
+                      <i class="fa fa-2x kea-icon-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/school/kea-k-benhavns-erhvervsakademi/" title="Følg os på LinkedIn">
+                      <i class="fa fa-2x kea-icon-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/keacph/" title="Følg os på Instagram">
+                      <i class="fa fa-2x kea-icon-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/keacph/" title="Følg os på Twitter">
+                      <i class="fa fa-2x kea-icon-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/KEAkanal" title="Følg os på YouTube">
+                      <i class="fa fa-2x kea-icon-youtube"></i>
+                    </a>
+                  </p>
+                  <p>
+                    <a href="http://keacph.podbean.com" target="_blank" title="Find vores podcasts på Podbean">
+                      <img src="//www.podbean.com/images/badges/w600.png" alt="Podbean logo" class="podbean-badge">
+                    </a>
+                  </p>
+                </div>
+              </div>
+    
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="moduletable">
+                  <h3>Vejledning</h3>
+                  <ul class="mod-list">
+                    <li><a href="/studiehandbog/studieadministration">Studieadministrationen</a></li>
+                    <li><a href="/studiehandbog/studie-og-karrierevejledning">Studie- og Karrierevejledning</a>
+                    </li>
+                    <li><a href="/studiehandbog/sps">SPS (specialpædagogisk støtte)</a></li>
+                    <li><a href="/studiehandbog/su">SU-vejledning</a></li>
+                    <li><a href="/praktik">Praktik</a></li>
+                  </ul>
+                </div>
+              </div>
+    
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="moduletable">
+                  <h3>Relevante links</h3>
+                  <ul class="mod-list">
+                    <li><a href="https://outlook.office.com/">KEA Webmail</a></li>
+                    <li><a href="http://bibliotek.kea.dk/" target="_blank">KEA Bibliotek</a></li>
+                    <li><a href="https://kea-fronter.itslearning.com/" target="_blank">Itslearning</a></li>
+                    <li><a href="https://katalog.kea.dk/" target="_blank">Fag- og modulkatalog</a></li>
+                    <li><a href="/studiehandbog/studieaktivitetsmodel">Studieaktivitetsmodel</a></li>
+                    <li><a href="/?Itemid=1105">PARIS-aftalen</a></li>
+                    <li><a href="https://kea.dk/ordensregler" target="_blank">Ordensregler</a></li>
+                  </ul>
+                </div>
+              </div>
+    
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="moduletable">
+                  <h3>Praktisk info</h3>
+                  <ul class="mod-list">
+                    <li><a href="https://kea.dk/cookies-og-privatliv" target="_blank">Cookies og privatliv</a>
+                    </li>
+                    <li><a href="https://kea.dk/persondatapolitik" target="_blank">Persondatapolitik</a></li>
+                    <li><a href="https://www.was.digst.dk/kea-dk" target="_blank">Tilgængelighedserklæring</a>
+                    </li>
+                    <li><a href="/studiehandbog/adresser">Find vej på KEA</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </div> -->
+
   </footer>
 
   <script src="/javascript/index.js"></script>
   <script src="/javascript/burger.js"></script>
+  <script src="/javascript/soegefelt.js"></script>
 </body>
 
 </html>
