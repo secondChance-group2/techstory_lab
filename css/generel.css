@@ -294,9 +294,10 @@ form {
   border: 10px solid #fefcfc;
   margin: 20px;
 }
-form h2 {
+.if {
   margin-top: 30px;
   margin-bottom: 20px;
+  margin-left: 32px;
 }
 fieldset {
   border: none;
@@ -324,6 +325,11 @@ textarea {
 }
 
 .row,
+.row1,
 .if {
   color: #1366b0;
+}
+
+.row1 {
+  margin-left: 13px;
 }
