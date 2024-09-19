@@ -7,6 +7,8 @@
 }
 
 .content {
+  border: 1rem;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -14,7 +16,6 @@
 
 .equipment img {
   max-width: 100%;
-  border-radius: 8px;
 }
 
 .equipment h3 {
@@ -27,4 +28,31 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #555;
+}
+
+.category_info {
+  background-color: #1c78c1;
+  margin-top: -11px;
+}
+
+/*GARDIAN SLANGE */
+
+.gradient-loop {
+  width: 80%;
+  height: 20px; /* Juster højden efter behov */
+  background: linear-gradient(200deg, #1366b0, #9f96c9, #eb5c8d, #ea4e43);
+  background-size: 400% 400%;
+  margin: 50px;
+  margin-left: 15%;
+  border-radius: 10px 10px 10px 10px;
+  animation: gradientAnimation 1s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
