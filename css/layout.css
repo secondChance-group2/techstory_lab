@@ -7,6 +7,7 @@
 
   .info p {
     margin-top: 20px;
+    max-width: 65ch;
   }
 
   .studentCard {
@@ -65,23 +66,20 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-items: center; /* Center items horizontally */
     background: linear-gradient(to bottom, #9f96c9, #ea4e4380 70%);
+    text-decoration: none;
+    height: 200px;
   }
 
   .list img {
-    width: 50px;
+    width: 20%;
     height: auto;
+    grid-row: 1;
   }
 
   .list h3 {
     margin: 10px 0;
-  }
-
-  .list p {
-    font-size: 14px;
-    line-height: 1.5;
-    padding: 10px;
-    text-align: center;
   }
 
   .gradient-line {
@@ -185,35 +183,51 @@
 
   .info p {
     margin-top: 20px;
+    max-width: 65ch;
   }
 
   .studentCard {
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     width: 90%;
+    height: 250px;
     margin-left: 20px;
     background-color: #1c78c14c;
     margin-top: 50px;
     padding: 20px;
+    position: relative; /* Set this to position child elements absolutely within it */
+  }
+  .studentCard img {
+    position: absolute; /* Position the image absolutely within the .studentCard */
+    bottom: 0; /* Align to the bottom */
+    right: 0; /* Align to the right */
+    width: 40%; /* Set the width of the image */
+  }
+
+  .studentCard_p {
+    color: white;
+  }
+
+  .studentCardText {
+    color: #1366b0;
   }
 
   .EquipmentBox {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 3fr 1fr 2fr 1fr;
     grid-template-rows: auto;
     grid-gap: 10px;
-    width: auto;
-    height: auto;
     background-color: #1c78c14c;
-    padding: 50px;
+    padding-left: 20px;
     margin-top: 70px;
     margin-bottom: 20px;
-    align-items: center;
+    position: relative; /* This is needed for absolute positioning of child elements */
   }
 
   .equipmentText {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
+    max-width: 65ch;
   }
 
   .map {
@@ -221,41 +235,42 @@
     grid-column-start: 3;
   }
 
+  .openHours {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+  }
+
   .categoriesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+    grid-gap: 20px; /* Add spacing between items */
     padding: 50px;
   }
 
   .list {
-    width: auto;
-    height: auto;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
     border-radius: 20px;
     background-color: #1c78c14c;
     padding: 10px;
     margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     background: linear-gradient(to bottom, #9f96c9, #ea4e4380 70%);
+    text-align: center;
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-decoration: none;
+    height: 300px; /* Set a fixed height for equal size */
   }
 
   .list img {
-    width: 50px;
+    width: 20%;
     height: auto;
-  }
-
-  .list h3 {
-    margin: 10px 0;
-  }
-
-  .list p {
-    font-size: 14px;
-    line-height: 1.5;
-    padding: 10px;
-    text-align: center;
+    grid-row: 1;
   }
 
   .gradient-line {
@@ -279,6 +294,7 @@
   .accessText {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
+    max-width: 65ch;
   }
 
   .video {
@@ -288,40 +304,38 @@
 
   .contact {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     margin: 0 auto;
-    background-color: rgba(28, 120, 193, 0.3); /* Background color with 30% opacity */
-  }
-  h4 {
-    grid-column: 1 / 4; /* Span across all columns */
-    font-family: "Helvetica Neue-Bold", Helvetica;
-    text-align: center;
+    background-color: rgba(28, 120, 193, 0.3);
+    padding: 20px;
   }
 
+  /* Center the h4 header across all columns */
+  h4 {
+    grid-column: 1 / 4;
+    margin: 0;
+  }
+
+  /* Ensure .contactCard is centered within its grid cell */
   .contactCard {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 16px;
-    border-radius: 8px;
-    justify-content: space-between; /* Distribute space evenly */
+    text-align: center;
   }
 
+  /* Style for images within .contactCard */
   .contactCard img {
-    width: 100px;
-    height: 100px;
+    width: 60%;
+    height: auto;
     object-fit: cover;
-    border-radius: 50%;
   }
 
   .contactCard p {
-    font-family: "Helvetica Neue", Helvetica;
-    color: #4f4f4f;
-    font-size: 14px;
     text-align: center;
-    margin: 8px 0;
   }
 
   .contactCard p:nth-child(3) {
